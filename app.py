@@ -7,7 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return 'Hi there'
+	text = "hello what is your name"
+	analyzer = SentimentIntensityAnalyzer()
+	vs = analyzer.polarity_scores(text)
+	return vs
 
 @app.route('/analyze')
 def analyze():
