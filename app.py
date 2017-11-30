@@ -1,14 +1,14 @@
 # ./app.py
 from flask import Flask
-from analyze import Analyzer
+# from analyze import Analyzer
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	text = "I hate your guts"
-	vader = Analyzer()
-	result = vader.result(text)
+	result = "I hate your guts"
+	# vader = Analyzer()
+	# result = vader.result(text)
 	return result
 
 # @app.route('/analyze')
