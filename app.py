@@ -5,8 +5,12 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
 
-@app.route('/analyze')
+@app.route('/')
 def index():
+	return 'Hi there'
+
+@app.route('/analyze')
+def analyze():
 	text = request.args.get('text')
 	analyzer = SentimentIntensityAnalyzer()
 	vs = analyzer.polarity_scores(text)
