@@ -1,6 +1,6 @@
 # ./app.py
 from flask import Flask
-# from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
 
