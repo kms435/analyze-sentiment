@@ -1,6 +1,5 @@
 # ./app.py
-from flask import (Flask, jsonify, render_template)
-from flask import request
+from flask import Flask
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
