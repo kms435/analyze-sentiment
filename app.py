@@ -1,16 +1,15 @@
 # ./app.py
 from flask import Flask
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from analyze import Analyzer
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return "hello motherfucker"
-	# text = "hello what is your name"
-	# analyzer = SentimentIntensityAnalyzer()
-	# vs = analyzer.polarity_scores(text)
-	# return str(vs)
+	text = "I hate your guts"
+	vader = Analyzer()
+	result = vader.result(text)
+	return result
 
 # @app.route('/analyze')
 # def analyze():
